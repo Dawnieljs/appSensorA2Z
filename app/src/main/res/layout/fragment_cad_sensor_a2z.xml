@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,91 +22,54 @@
                 android:id="@+id/textViewNm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nome" />
+                android:text="Codigo da Marca" />
             <EditText
-                android:id="@+id/etNome"
+                android:id="@+id/cdMarca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="text" />
             <TextView
-                android:id="@+id/textViewMail"
+                android:id="@+id/flClasse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="e-mail" />
-            <EditText
-                android:id="@+id/etMail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textEmailAddress" />
-            <TextView
-                android:id="@+id/textViewSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="e-mail" />
-            <EditText
-                android:id="@+id/etSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword" />
-            <TextView
-                android:id="@+id/textViewPerfil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Perfil" />
-            <RadioGroup
-                android:id="@+id/rgPerfil"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-                        <RadioButton
-                            android:id="@+id/radioButtonIni"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Iniciante" />
-                        <RadioButton
-                            android:id="@+id/radioButtonInt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Intermediário" />
-                        <RadioButton
-                            android:id="@+id/radioButtonAvn"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Avançado" />
-                    </TableRow>
-                </TableLayout>
-            </RadioGroup>
-            <TextView
-                android:id="@+id/textViewSexo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sexo" />
+                android:text="Classe" />
             <Spinner
-                android:id="@+id/spSexo"
+                android:id="@+id/spClasse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
-            android:id="@+id/textViewNasc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Data Nascimento" />
-            <CalendarView
-                android:id="@+id/cvDataNasc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <CheckBox
-                android:id="@+id/cbAceite"
+                android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aceito os termos ...." />
+                android:text="Codigo do Modelo" />
+            <EditText
+                android:id="@+id/cdModelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/flAferido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aferido" />
+            <Spinner
+                android:id="@+id/spAferido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/flImportado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Importado" />
+            <Spinner
+                android:id="@+id/spImportado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/btSalvar"
                 android:layout_width="match_parent"

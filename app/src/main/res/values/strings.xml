@@ -7,4 +7,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_cad_sensor">cad. sensor</string>
     <string name="title_cad_sensor_a2z" />
+    <string-array name="spClasse">
+        <item>Analogico</item>
+        <item>Digital</item>
+    </string-array>
+    <string-array name="flAferido">
+        <item>Sim</item>
+        <item>Nao</item>
+    </string-array>
+    <string-array name="flImportado">
+        <item>Sim</item>
+        <item>Nao</item>
+    </string-array>
 </resources>

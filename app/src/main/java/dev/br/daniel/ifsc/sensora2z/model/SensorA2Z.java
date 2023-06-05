@@ -1,5 +1,7 @@
 package dev.br.daniel.ifsc.sensora2z.model;
 
+import android.widget.EditText;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -8,25 +10,27 @@ public class SensorA2Z {
         //atributos do sensor
         private String marca;
         private String serie;
-        private int importado;
-        private int aferido;
+        private byte importado;
+        private byte aferido;
         private int modelo;
-        private int classe;
+        private byte classe;
         private String observacoes;
         private int preco;
 
         //atributos do tecnico
         private String responsavel;
-
+        public byte getImportado() { return importado;}
+        public byte getAferido() { return aferido;}
+        public byte getClasse() { return classe;}
         //construtor
-        public SensorA2Z (JSONObject jo) {
+        public SensorA2Z (JSONObject jo, byte importado, byte aferido, byte classe) {
+            this.importado = importado;
+            this.aferido = aferido;
+            this.classe = classe;
             try {
                 this.marca = jo.getString("marca");
                 this.serie = jo.getString("serie");
-                this.importado = jo.getInt("importado");
-                this.aferido = jo.getInt("aferido");
                 this.modelo = jo.getInt("modelo");
-                this.classe = jo.getInt("classe");
                 this.observacoes = jo.getString("observacoes");
                 this.preco = jo.getInt("preco");
                 this.responsavel = jo.getString("responsavel");

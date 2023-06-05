@@ -1,4 +1,4 @@
-package dev.br.daniel.ifsc.sensora2z.ui.dashboard;
+package dev.br.daniel.ifsc.sensora2z.ui.home.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

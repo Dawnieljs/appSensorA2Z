@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -25,16 +27,6 @@ import dev.br.daniel.ifsc.sensora2z.R;
  */
 public class CadSensorA2Z extends Fragment implements View.OnClickListener, Response.ErrorListener,
         Response.Listener {
-    {
-
-        //Atributos
-        private EditText etMarca;
-        private Button btSalvar;
-        private EditText etSerie;
-        private EditText etObs;
-        private EditText etPreco;
-        private View root;
-
 
         // TODO: Rename parameter arguments, choose names that match
         // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,6 +38,12 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
         private String mParam2;
         private String setNomeMarca;
         private String setNumserie;
+
+        private EditText etMarca;
+        private EditText etSerie;
+        private EditText btSalvar;
+        private View root;
+
 
     public CadSensorA2Z() {
     }
@@ -125,7 +123,13 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
     }
 
     @Override
-    public void onClick(View view) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setDisplayShowCustomEnabled(false);
+        ((AppCompatActivity) getActivity()).getSupportActionBar()
+                .setDisplayHomeAsUpEnabled(false);
+    }
 
     }
 }
