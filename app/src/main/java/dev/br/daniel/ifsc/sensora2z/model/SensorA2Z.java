@@ -9,32 +9,27 @@ public class SensorA2Z {
 
     //atributos do sensor
         private String marca;
-        private String serie;
-        private byte importado;
-        private byte aferido;
+        private boolean importado;
+        private boolean aferido;
         private int modelo;
-        private byte classe;
-        private String observacoes;
-        private int preco;
+        private boolean classe;
+
 
     //métodos
     public String getMarca() { return marca;}
-    public String getSerie() {return serie;}
-    public byte getImportado() { return importado;}
-    public byte getAferido() { return aferido;}
+    public boolean getImportado() { return importado;}
+    public boolean getAferido() { return aferido;}
     public int getModelo() { return modelo;}
-    public byte getClasse() { return classe;}
-    public String getObservacoes() { return observacoes;}
-    public int getPreco() { return preco;}
+    public boolean getClasse() { return classe;}
 
         //construtor
         public SensorA2Z (JSONObject jo) {
             try {
                 this.marca = jo.getString("marca");
-                this.serie = jo.getString("serie");
+                this.classe = jo.getBoolean("classe");
                 this.modelo = jo.getInt("modelo");
-                this.observacoes = jo.getString("observacoes");
-                this.preco = jo.getInt("preco");
+                this.aferido = jo.getBoolean("aferido");
+                this.importado = jo.getBoolean("importado");
             }catch(JSONException je){
                 je.printStackTrace();
             }
@@ -48,18 +43,6 @@ public class SensorA2Z {
         this.setAferido(0);
         this.setModelo(0);
         this.setClasse(0);
-        this.setObservacoes("");
-        this.setPreco(0);
-        this.setResponsavel("");
-    }
-
-    private void setResponsavel(String s) {
-    }
-
-    private void setPreco(int i) {
-    }
-
-    private void setObservacoes(String s) {
     }
 
     private void setClasse(int i) {
@@ -85,13 +68,10 @@ public class SensorA2Z {
         JSONObject json = new JSONObject();
         try {
             json.put("marca", this.marca);
-            json.put("serie", this.serie);
-            json.put("importado", this.importado);
-            json.put("aferido", this.aferido);
-            json.put("modelo", this.modelo);
             json.put("classe", this.classe);
-            json.put("observacoes", this.observacoes);
-            json.put("preco", this.preco);
+            json.put("modelo", this.modelo);
+            json.put("aferido", this.aferido);
+            json.put("importado", this.importado);
         } catch (JSONException e) {
             e.printStackTrace();
         }

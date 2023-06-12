@@ -33,8 +33,8 @@ public class ConSensorAZRecyclerViewAdapter extends RecyclerView.Adapter<ConSens
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).getSerie());
         holder.mContentView.setText(mValues.get(position).getMarca());
+       // holder.mContentView.setText(mValues.get(position).getModelo());
     }
 
     @Override

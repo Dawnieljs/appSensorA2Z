@@ -109,7 +109,11 @@ public class ConSensorA2ZFragment extends Fragment implements Response.ErrorList
 
     @Override
     public void onErrorResponse(VolleyError error) {
-
+        //mostrar mensagem que veio do servidor
+        Snackbar mensagem = Snackbar.make(view,
+                "Ops! Houve um problema ao realizar a consulta: " +
+                        error.toString(), Snackbar.LENGTH_LONG);
+        mensagem.show();
     }
 
     @Override
