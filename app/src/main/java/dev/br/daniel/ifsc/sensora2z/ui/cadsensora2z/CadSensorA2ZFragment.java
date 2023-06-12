@@ -1,11 +1,8 @@
 package dev.br.daniel.ifsc.sensora2z.ui.cadsensora2z;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -22,10 +19,10 @@ import dev.br.daniel.ifsc.sensora2z.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CadSensorA2Z#newInstance} factory method to
+ * Use the {@link CadSensorA2ZFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CadSensorA2Z extends Fragment implements View.OnClickListener, Response.ErrorListener,
+public class CadSensorA2ZFragment extends Fragment implements View.OnClickListener, Response.ErrorListener,
         Response.Listener {
 
         // TODO: Rename parameter arguments, choose names that match
@@ -41,11 +38,11 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
 
         private EditText etMarca;
         private EditText etSerie;
-        private EditText btSalvar;
+        private Button btSalvar;
         private View root;
 
 
-    public CadSensorA2Z() {
+    public CadSensorA2ZFragment() {
     }
         // Required empty public constructor
 
@@ -59,8 +56,8 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
          * @return A new instance of fragment cad_sensor_a2z.
          */
         // TODO: Rename and change types and number of parameters
-        public static CadSensorA2Z newInstance (String param1, String param2){
-        CadSensorA2Z fragment = new CadSensorA2Z();
+        public static CadSensorA2ZFragment newInstance (String param1, String param2){
+        CadSensorA2ZFragment fragment = new CadSensorA2ZFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -97,7 +94,7 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
             //verificando se e o botao salvar
             case R.id.btSalvar:
                 ;
-                CadSensorA2Z cadastro = new CadSensorA2Z();
+                CadSensorA2ZFragment cadastro = new CadSensorA2ZFragment();
                 cadastro.setNomeMarca = (this.etMarca.getText().toString());
                 cadastro.setNumserie = (this.etSerie.getText().toString());
                 Context context = view.getContext();
@@ -110,7 +107,7 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
 
         }
     }
-    }
+
 
     @Override
     public void onErrorResponse(VolleyError error) {
@@ -119,17 +116,5 @@ public class CadSensorA2Z extends Fragment implements View.OnClickListener, Resp
 
     @Override
     public void onResponse(Object response) {
-
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ((AppCompatActivity)getActivity()).getSupportActionBar()
-                .setDisplayShowCustomEnabled(false);
-        ((AppCompatActivity) getActivity()).getSupportActionBar()
-                .setDisplayHomeAsUpEnabled(false);
-    }
-
     }
 }

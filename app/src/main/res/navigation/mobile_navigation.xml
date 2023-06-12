@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="dev.br.daniel.ifsc.sensora2z.ui.home.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
         android:id="@+id/navigation_notifications"
         android:name="dev.br.daniel.ifsc.sensora2z.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
@@ -25,7 +19,12 @@
 
     <fragment
         android:id="@+id/navigation_cad_sensor"
-        android:name="dev.br.daniel.ifsc.sensora2z.ui.cadsensora2z.CadSensorA2Z"
-        android:label="@string/title_cad_sensor_a2z"
+        android:name="dev.br.daniel.ifsc.sensora2z.ui.cadsensora2z.CadSensorA2ZFragment"
+        android:label="@string/title_cad_sensor"
         tools:layout="@layout/fragment_cad_sensor_a2z" />
+    <fragment
+        android:id="@+id/navigation_con_sensor"
+        android:name="dev.br.daniel.ifsc.sensora2z.ui.cadsensora2z.ConSensorA2ZFragment"
+        android:label="@string/title_con_sensor"
+        tools:layout="@layout/fragment_con_sensor_a2z_list" />
 </navigation>

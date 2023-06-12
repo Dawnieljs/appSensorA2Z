@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 public class SensorA2Z {
 
-        //atributos do sensor
+    //atributos do sensor
         private String marca;
         private String serie;
         private byte importado;
@@ -17,23 +17,24 @@ public class SensorA2Z {
         private String observacoes;
         private int preco;
 
-        //atributos do tecnico
-        private String responsavel;
-        public byte getImportado() { return importado;}
-        public byte getAferido() { return aferido;}
-        public byte getClasse() { return classe;}
+    //métodos
+    public String getMarca() { return marca;}
+    public String getSerie() {return serie;}
+    public byte getImportado() { return importado;}
+    public byte getAferido() { return aferido;}
+    public int getModelo() { return modelo;}
+    public byte getClasse() { return classe;}
+    public String getObservacoes() { return observacoes;}
+    public int getPreco() { return preco;}
+
         //construtor
-        public SensorA2Z (JSONObject jo, byte importado, byte aferido, byte classe) {
-            this.importado = importado;
-            this.aferido = aferido;
-            this.classe = classe;
+        public SensorA2Z (JSONObject jo) {
             try {
                 this.marca = jo.getString("marca");
                 this.serie = jo.getString("serie");
                 this.modelo = jo.getInt("modelo");
                 this.observacoes = jo.getString("observacoes");
                 this.preco = jo.getInt("preco");
-                this.responsavel = jo.getString("responsavel");
             }catch(JSONException je){
                 je.printStackTrace();
             }
@@ -76,7 +77,7 @@ public class SensorA2Z {
     private void setSerie(String s) {
     }
 
-    private void setMarca(String s) {
+    public void setMarca(String s) {
     }
 
     //Metodo retorna o objeto com dados no formato JSON
@@ -91,7 +92,6 @@ public class SensorA2Z {
             json.put("classe", this.classe);
             json.put("observacoes", this.observacoes);
             json.put("preco", this.preco);
-            json.put("responsavel", this.responsavel);
         } catch (JSONException e) {
             e.printStackTrace();
         }
