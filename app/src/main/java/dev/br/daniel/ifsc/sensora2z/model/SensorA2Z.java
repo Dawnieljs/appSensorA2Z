@@ -8,28 +8,28 @@ import org.json.JSONObject;
 public class SensorA2Z {
 
     //atributos do sensor
-        private String marca;
-        private boolean importado;
-        private boolean aferido;
-        private int modelo;
-        private boolean classe;
+        private String cdmarca;
+        private boolean flimportado;
+        private boolean flaferido;
+        private int cdmodelo;
+        private boolean flclasse;
 
 
     //métodos
-    public String getMarca() { return marca;}
-    public boolean getImportado() { return importado;}
-    public boolean getAferido() { return aferido;}
-    public int getModelo() { return modelo;}
-    public boolean getClasse() { return classe;}
+    public String getMarca() { return cdmarca;}
+    public boolean getImportado() { return flimportado;}
+    public boolean getAferido() { return flaferido;}
+    public int getModelo() { return cdmodelo;}
+    public boolean getClasse() { return flclasse;}
 
         //construtor
         public SensorA2Z (JSONObject jo) {
             try {
-                this.marca = jo.getString("marca");
-                this.classe = jo.getBoolean("classe");
-                this.modelo = jo.getInt("modelo");
-                this.aferido = jo.getBoolean("aferido");
-                this.importado = jo.getBoolean("importado");
+                this.cdmarca = jo.getString("marca");
+                this.flclasse = jo.getBoolean("classe");
+                this.cdmodelo = jo.getInt("modelo");
+                this.flaferido = jo.getBoolean("aferido");
+                this.flimportado = jo.getBoolean("importado");
             }catch(JSONException je){
                 je.printStackTrace();
             }
@@ -67,11 +67,11 @@ public class SensorA2Z {
     public JSONObject toJsonObject() {
         JSONObject json = new JSONObject();
         try {
-            json.put("marca", this.marca);
-            json.put("classe", this.classe);
-            json.put("modelo", this.modelo);
-            json.put("aferido", this.aferido);
-            json.put("importado", this.importado);
+            json.put("marca", this.cdmarca);
+            json.put("classe", this.flclasse);
+            json.put("modelo", this.cdmodelo);
+            json.put("aferido", this.flaferido);
+            json.put("importado", this.flimportado);
         } catch (JSONException e) {
             e.printStackTrace();
         }

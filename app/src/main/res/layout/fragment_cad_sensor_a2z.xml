@@ -14,67 +14,85 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="27dp" />
+
             <TextView
                 android:id="@+id/textViewNm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Codigo da Marca" />
+
             <EditText
                 android:id="@+id/cdMarca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text" />
+
             <TextView
                 android:id="@+id/flClasse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Classe" />
+
+            <Spinner
+                android:id="@+id/spClasse"
+                android:layout_width="match_parent"
+                android:layout_height="61dp" />
+
             <TextView
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Codigo do Modelo" />
+
             <EditText
                 android:id="@+id/cdModelo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text" />
+
             <TextView
                 android:id="@+id/flAferido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Aferido" />
+
+            <Spinner
+                android:id="@+id/spAferido"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
             <TextView
                 android:id="@+id/flImportado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Importado" />
+
+            <Spinner
+                android:id="@+id/spImportado"
+                android:layout_width="match_parent"
+                android:layout_height="42dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="245dp" />
+
             <Button
                 android:id="@+id/btSalvar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Salvar" />
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
-            <Spinner
-                android:id="@+id/spImportado"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Spinner
-                android:id="@+id/spAferido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Spinner
-                android:id="@+id/spClasse"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
     </ScrollView>

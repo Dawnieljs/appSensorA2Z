@@ -35,11 +35,18 @@ public class CadSensorA2ZFragment extends Fragment implements View.OnClickListen
         private String mParam2;
         private String setNomeMarca;
         private String setNumserie;
+        private String setAferido;
+        private String setModelo;
+        private String setClasse;
+        private EditText cdMarca;
+        private EditText flimportado;
+        private EditText flaferido;
 
-        private EditText etMarca;
-        private EditText etSerie;
+        private EditText cdModelo;
+        private EditText flclasse;
         private Button btSalvar;
         private View root;
+
 
 
     public CadSensorA2ZFragment() {
@@ -80,8 +87,11 @@ public class CadSensorA2ZFragment extends Fragment implements View.OnClickListen
         // Inflate the layout for this fragment
         this.root = inflater.inflate(R.layout.fragment_cad_sensor_a2z, container, false);
         //
-        this.etMarca = (EditText) root.findViewById(R.id.etMarca);
-        this.etSerie = (EditText) root.findViewById(R.id.etSerie);
+        this.cdMarca = (EditText) root.findViewById(R.id.etMarca);
+        //this.flimportado = (EditText) root.findViewById(R.id.flImportado);
+        //this.flaferido = (EditText) root.findViewById(R.id.flAferido);
+        this.cdModelo = (EditText) root.findViewById(R.id.cdModelo);
+        //this.flclasse = (EditText) root.findViewById(R.id.flClasse);
         this.btSalvar = (Button) root.findViewById(R.id.btSalvar);
         //
         this.btSalvar.setOnClickListener(this);
@@ -95,8 +105,11 @@ public class CadSensorA2ZFragment extends Fragment implements View.OnClickListen
             case R.id.btSalvar:
                 ;
                 CadSensorA2ZFragment cadastro = new CadSensorA2ZFragment();
-                cadastro.setNomeMarca = (this.etMarca.getText().toString());
-                cadastro.setNumserie = (this.etSerie.getText().toString());
+                cadastro.setNomeMarca = (this.cdMarca.getText().toString());
+                cadastro.setNumserie = (this.flimportado.getText().toString());
+                cadastro.setAferido = (this.flaferido.getText().toString());
+                cadastro.setClasse = (this.flclasse.getText().toString());
+                cadastro.setModelo = (this.cdModelo.getText().toString());
                 Context context = view.getContext();
                 CharSequence text = "salvo com sucesso!";
                 int duration = Toast.LENGTH_SHORT;

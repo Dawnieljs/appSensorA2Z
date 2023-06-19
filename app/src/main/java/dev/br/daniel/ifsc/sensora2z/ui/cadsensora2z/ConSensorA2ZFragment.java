@@ -1,5 +1,6 @@
 package dev.br.daniel.ifsc.sensora2z.ui.cadsensora2z;
 
+import android.Manifest;
 import android.content.Context;
 import android.os.Bundle;
 
